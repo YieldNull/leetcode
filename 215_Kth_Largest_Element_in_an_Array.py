@@ -1,3 +1,7 @@
+"""
+http://yieldnull.com/blog/c33aa8148330975d253e97e740a5238840ceade0
+"""
+
 class Solution(object):
     def findKthLargest(self, nums, k):
         """

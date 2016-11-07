@@ -33,14 +33,10 @@ public class Solution {
     void addClosure(int remainSteps, Node node) {
         Node emptyMove = node.outArrows.get(Node.EMPTY_ARROW);
 
-        if (emptyMove == null) {
-            if (end.index - node.index <= remainSteps)
-                currentNodes.add(node);
-        } else {
-            if (end.index - emptyMove.index <= remainSteps) {
-                currentNodes.add(node);
-                currentNodes.add(emptyMove);
-            }
+        if (end.index - node.index <= remainSteps){
+            currentNodes.add(node);
+            
+            if (emptyMove != null) currentNodes.add(emptyMove);
         }
     }
 

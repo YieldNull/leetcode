@@ -242,7 +242,9 @@ public class LFUCache {
                     tail = newFreq;
                 }
             }
-
+            
+            // freqNode is useful when inserting newFreq
+            // so we check empty after inserting
             if (oldFreqNodeEmpty) {
                 removeLRUList(freqNode);
             }
